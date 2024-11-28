@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salão de Beleza</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header>
         <h1>Bem-vindo ao nosso Salão de Beleza</h1>
         <div class="header-buttons">
-            <a href="agendamento.php" class="btn">Agendar Horário</a>
+            <!-- Link para a página de agendamento -->
+            <a href="formulario.php" class="btn" aria-label="Agendar Horário">Agendar Horário</a>
         </div>
     </header>
 
@@ -25,12 +27,20 @@
     <footer>
         <div class="footer-content">
             <p>&copy; 2024 Salão de Beleza. Todos os direitos reservados.</p>
-            <div class="social-icons">
-                <a href="https://wa.me/123456789" class="icon whatsapp">📱</a>
-                <a href="https://twitter.com" class="icon twitter">🐦</a>
-                <a href="https://instagram.com" class="icon instagram">📷</a>
-                <a href="https://facebook.com" class="icon facebook">📘</a>
-            </div>
+            <nav class="social-icons" aria-label="Redes sociais">
+                <a href="https://wa.me/seunumero" target="_blank" class="icon whatsapp" title="WhatsApp" aria-label="WhatsApp">
+                    <i class="fa fa-whatsapp"></i>
+                </a>
+                <a href="https://twitter.com/seuperfil" target="_blank" class="icon twitter" title="Twitter" aria-label="Twitter">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com/seuperfil" target="_blank" class="icon instagram" title="Instagram" aria-label="Instagram">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com/seuperfil" target="_blank" class="icon facebook" title="Facebook" aria-label="Facebook">
+                    <i class="fa fa-facebook"></i>
+                </a>
+            </nav>
         </div>
     </footer>
 </body>
