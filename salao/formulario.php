@@ -1,47 +1,105 @@
+<?php
+// Conexão com o banco de dados
+$servername = "localhost";
+$username = "root"; // Altere conforme necessário
+$password = ""; // Altere conforme necessário
+$dbname = "salao_beauty";
+
+// Criação da conexão
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verificação de conexão
+if ($conn->connect_error) {
+    die("Falha na conexão: " . $conn->connect_error);
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = $_POST['nome'];
+    $telefone = $_POST['telefone'];
+    $email = $_POST['email'];
+    $servico = $_POST['servico'];
+
+    // Insere os dados no banco de dados
+    $sql = "INSERT INTO clientes (nome, telefone, email, servico) VALUES ('$nome', '$telefone', '$email', '$servico')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Novo registro criado com sucesso!";
+    } else {
+        echo "Erro: " . $sql . "<br>" . $conn->error;
+    }
+
+    $conn->close();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salão de Beleza</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Formulário Salão de Beleza</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .form-container h2 {
+            text-align: center;
+        }
+        .form-container input, .form-container select {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Bem-vindo ao nosso Salão de Beleza</h1>
-        <div class="header-buttons">
-            <!-- Link para a página de agendamento -->
-            <a href="formulario.php" class="btn" aria-label="Agendar Horário">Agendar Horário</a>
-        </div>
-    </header>
 
-    <main>
-        <section class="content">
-            <div class="image-container">
-                <img src="uploads/green.jpg" alt="Salão de Beleza">
-            </div>
-        </section>
-    </main>
+<div class="form-container">
+    <h2>Formulário de Agendamento</h2>
+    <form method="POST" action="formulario.php">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Salão de Beleza. Todos os direitos reservados.</p>
-            <nav class="social-icons" aria-label="Redes sociais">
-                <a href="https://wa.me/seunumero" target="_blank" class="icon whatsapp" title="WhatsApp" aria-label="WhatsApp">
-                    <i class="fa fa-whatsapp"></i>
-                </a>
-                <a href="https://twitter.com/seuperfil" target="_blank" class="icon twitter" title="Twitter" aria-label="Twitter">
-                    <i class="fa fa-twitter"></i>
-                </a>
-                <a href="https://instagram.com/seuperfil" target="_blank" class="icon instagram" title="Instagram" aria-label="Instagram">
-                    <i class="fa fa-instagram"></i>
-                </a>
-                <a href="https://facebook.com/seuperfil" target="_blank" class="icon facebook" title="Facebook" aria-label="Facebook">
-                    <i class="fa fa-facebook"></i>
-                </a>
-            </nav>
-        </div>
-    </footer>
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="servico">Serviço Desejado:</label>
+        <select id="servico" name="servico" required>
+            <option value="Corte de Cabelo">Corte de Cabelo</option>
+            <option value="Manicure">Manicure</option>
+            <option value="Pedicure">Pedicure</option>
+            <option value="Massagem">Massagem</option>
+            <option value="Escova">Escova</option>
+        </select>
+
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
 </body>
 </html>
