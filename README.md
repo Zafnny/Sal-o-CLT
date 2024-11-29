@@ -1,1 +1,1 @@
-# Sal-o-CLT
+Página de um salão de beleza
