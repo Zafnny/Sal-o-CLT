@@ -1,8 +1,8 @@
 <?php
 // Conexão com o banco de dados
 $servername = "localhost";
-$username = "root"; // Altere conforme necessário
-$password = ""; // Altere conforme necessário
+$username = "root"; 
+$password = ""; 
 $dbname = "salao_beauty";
 
 // Criação da conexão
@@ -14,13 +14,11 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Sanitização e validação dos dados do formulário
     $nome = mysqli_real_escape_string($conn, $_POST['nome']);
     $telefone = mysqli_real_escape_string($conn, $_POST['telefone']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $servico = mysqli_real_escape_string($conn, $_POST['servico']);
 
-    // Preparando a consulta para evitar SQL Injection
     $stmt = $conn->prepare("INSERT INTO clientes (nome, telefone, email, servico) VALUES (?, ?, ?, ?)");
     $stmt->bind_param("ssss", $nome, $telefone, $email, $servico);
 
@@ -48,19 +46,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center; /* Centraliza a página */
-            align-items: center; /* Alinha verticalmente */
-            height: 100vh; /* Altura total da tela */
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
             background-color: #f9f9f9;
         }
         .form-container {
             width: 100%;
-            max-width: 400px; /* Define a largura máxima */
+            max-width: 400px; 
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 8px;
-            background-color: rgb(189, 224, 254); /* Cor de fundo personalizada */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
+            background-color: rgb(189, 224, 254); 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
         }
         .form-container h2 {
             text-align: center;
@@ -71,12 +69,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             margin: 10px 0;
             border-radius: 4px;
             border: 1px solid #ccc;
-            box-sizing: border-box; /* Garante que o padding não ultrapasse a largura total */
+            box-sizing: border-box; 
         }
         .form-container button {
             width: 100%;
             padding: 12px;
-            background-color: #ffafcc; /* Cor do botão conforme solicitado */
+            background-color: #ffafcc; 
             color: white;
             border: none;
             border-radius: 4px;
