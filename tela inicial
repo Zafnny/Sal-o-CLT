@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>Salão de Beleza</h1>
+    <style>
+        h1 {
+            text-align: center;
+            height: 50px;
+            color: #000000;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        header {
+            background-image: url('https://blog.unicpharma.com.br/wp-content/uploads/2018/07/blog-queda-cabelo-cabelos-longos-667x325.jpg');
+            padding: 80px;
+        
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        nav {
+            background-color: #d983a6;
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .services .service {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+        }
+
+        .services .service i {
+            font-size: 2em;
+            color: #d983a6;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #000000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer .social-icons a {
+            color: white;
+            font-size: 2rem;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer .social-icons a:hover {
+            color: #a5c9ff;
+        }
+        footer {
+            background-color: #f4a5b3;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1></h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="formulario.php" class="btn" aria-label="Agendar Horário">Agendar Horário</a></li>
+        </div>
+        </ul>
+    </nav>
+    <main>
+        <section id="servicos" class="services">
+            <div class="service">
+                <img src="https://i.pinimg.com/736x/03/ac/55/03ac550334970b0a362448c453682920.jpg" alt="corte de cabelo"  width="300" height="200">
+                <h3>CORTE DE CABELO</h3>
+                <p>Se transforme com um corte moderno e único.</p>
+            </div>
+            <div class="service">
+                <img src="https://i.pinimg.com/736x/ec/d8/40/ecd840e53d3eb5a1aea22ed2c5ab9f16.jpg" alt="lavagem de cabelo"  width="300" height="200">
+                <h3>HIDRATAÇÃO</h3>
+                <p>Seu cabelo hidratado e leve com os melhores produtos.</p>
+            </div>
+            <div class="service">
+                <img src="https://i.pinimg.com/736x/f5/9d/2b/f59d2bb142b255a1114d76210f4af76b.jpg" alt="escova"  width="300" height="200">
+                <h3>ESCOVA</h3>
+                <p>Serviço prático para um momento de pressa.</p>
+            </div>
+            <div class="service">
+                <img src="https://i.pinimg.com/736x/62/a3/17/62a3179dcfab334eebc8311d5758f0d3.jpg" alt="prancha"  width="300" height="200">
+                <h3>PRANCHA</h3>
+                <p>Seu cabelo pronto para todas as ocasiões.</p>
+            </div>
+            <div class="service">
+                <img src="https://i.pinimg.com/736x/e0/7e/79/e07e79f033590e9cbd71565db8ec27d9.jpg" alt="pintar cabelo"  width="300" height="200">
+                <h3>TINTURA</h3>
+                <p>Estilize seu cabelo como desejar, quebrando padrões.</p>
+            </div>
+            <div class="service">
+                <img src="https://i.pinimg.com/736x/3c/bc/2e/3cbc2eeaafa2025e35193d7beba27d1a.jpg" alt="cutícula"  width="300" height="200">
+                <h3>RETIRAR CUTÍCULAS</h3>
+                <p>Mãos e pés limpos e prontos para qualquer ocasião.</p>
+            </div>
+            <div class="service">
+                <img src="https://i.pinimg.com/736x/aa/2b/63/aa2b63a994ff14a328907c0fe67b06d8.jpg" alt="pintar unhas"  width="300" height="200">
+                <h3>PINTAR AS UNHAS</h3>
+                <p>Mãos e pés impecáveis para qualquer ocasião.</p>
+            </div>
+            <div class="service">
+                <img src="https://i.pinimg.com/736x/5d/9d/04/5d9d047bcee7583afec961a40c0b106f.jpg" alt="reflexologia"  width="300" height="200">
+                <h3>REFLEXOLOGIA</h3>
+                <p>Massagem relaxante que faz a tensão do seu corpo sumir..</p>
+            </div>
+        </section>
+    </main>
+        <footer id="contato">
+            <div class="footer-content">
+                <p>&copy; 2024 Salão De Beleza Todos os direitos reservados.</p>
+                <nav class="social-icons" aria-label="Redes sociais">
+                    <a href="https://wa.me/seunumero" target="_blank" class="icon whatsapp" title="WhatsApp" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://twitter.com/seuperfil" target="_blank" class="icon twitter" title="Twitter" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com/seuperfil" target="_blank" class="icon instagram" title="Instagram" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/seuperfil" target="_blank" class="icon facebook" title="Facebook" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </nav>
+            </div>
+        </footer>
+</body>
+
+</html>
